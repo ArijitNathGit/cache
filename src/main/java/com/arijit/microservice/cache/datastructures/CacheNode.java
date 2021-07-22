@@ -1,28 +1,20 @@
 package com.arijit.microservice.cache.datastructures;
 
+import com.arijit.microservice.cache.models.User;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
 public class CacheNode {
-	private String name;
+	private User user;
 	private CacheNode previous;
 	private CacheNode next;
-	
-	public String getName() { return name; }
-	
-	public void setName(String name) { this.name = name; }
-	
-	public CacheNode getPrevious() { return previous; }
-	
-	public void setPrevious(CacheNode previous) { this.previous = previous; }
-	
-	public CacheNode getNext() { return next; }
-	
-	public void setNext(CacheNode next) { this.next = next; }
-
-	public CacheNode(String name, CacheNode previous, CacheNode next) {
-		super();
-		this.name = name;
-		this.previous = previous;
-		this.next = next;
-	}
-	
-	public CacheNode() {}
 }

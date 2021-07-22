@@ -1,7 +1,10 @@
 package com.arijit.microservice.cache.datastructures;
 
+import com.arijit.microservice.cache.models.User;
+
 public interface CacheDoubleLinkedList {
-	void addAtEnd(String name);
-	void removeAndAddAtEnd(CacheNode node);
-	void remove(String name);
+	CacheNode addAtEnd(User user);
+	CacheNode addAtEnd(CacheNode newNode);
+	User removeAndAddAtEnd(CacheNode node);
+	User remove();
 }
